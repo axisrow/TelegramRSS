@@ -30,7 +30,7 @@ return [
     'url' => (string) getenv('SELF_URL'),
     'server' => [
         'address' => (string) (getenv('SERVER_ADDRESS') ?? '127.0.0.1'),
-        'port' => (string) (getenv('SERVER_PORT') ?? '9504'),
+        'port' => (string) (getenv('PORT') ?: getenv('SERVER_PORT') ?: '9504'),
         'real_ip_header' => (string)(getenv('REAL_IP_HEADER') ?? ''),
     ],
     'client' => [
